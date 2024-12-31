@@ -469,3 +469,30 @@ nav {
 }
 
 /*Footer*/
+
+
+/*Sacola.html*/
+
+/*Resumo do Pedido*/
+
+.resumo-do-pedido{
+  width: 19rem;
+  height: 22rem;
+  margin: 2rem 0 0 49rem; /*Cima, direita, baixo, esquerda*/
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+.titulo-resumo-pedido{
+  font-size: 20px;
+  margin: 13px 0 0 10px;
+}
+
+.preco-resumo-pedido{
+  font-size: 15px;
+  margin: 0 0 0 10px;
+}
+
+/*Resumo do Pedido*/
+
+/*Sacola.html*/
