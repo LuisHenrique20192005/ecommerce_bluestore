@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: "Arial";
 }
@@ -111,6 +112,7 @@ nav ul li:hover {
 header {
   background-image: radial-gradient(#fff, #c7c7c7);
 }
+
 
 .header-bottom-side {
   display: flex;
@@ -229,6 +231,7 @@ main {
 
 .cols-3 img {
   max-width: 100%;
+  border-radius: 10%;
 }
 
 .cols-4 {
@@ -238,6 +241,7 @@ main {
 
 .cols-4 img {
   max-width: 100%;
+  border-radius: 10%;
 }
 
 .cols > * {
@@ -245,7 +249,7 @@ main {
   transition: all 0.2s;
 }
 
-.cols > *:hover {
+.cols-4 > *:hover {
   transform: translateY(-5px);
 }
 
@@ -282,6 +286,20 @@ main {
 
 .produc-price span {
   font-weight: 600;
+}
+
+.botao-adicionar-carrinho{
+  margin-top: 10px;
+  box-sizing: content-box; /* Tenta calcular somente o conteúdo */
+  padding: 10px 20px; /* Ajuste de espaço interno */
+  border: none; /* Evita problemas de bordas visíveis */
+  border-radius: 10px; /* Deixe o botão arredondado */
+  background-color: rgb(41, 147, 222);
+  color: white;
+}
+
+.botao-adicionar-carrinho:hover{
+  cursor: pointer;
 }
 
 .exclusive-container {
@@ -475,24 +493,226 @@ nav {
 
 /*Resumo do Pedido*/
 
-.resumo-do-pedido{
-  width: 19rem;
-  height: 22rem;
-  margin: 2rem 0 0 49rem; /*Cima, direita, baixo, esquerda*/
-  background-color: rgb(255, 255, 255);
-  display: inline-block;
-}
-
-.titulo-resumo-pedido{
-  font-size: 20px;
-  margin: 13px 0 0 10px;
-}
-
-.preco-resumo-pedido{
-  font-size: 15px;
-  margin: 0 0 0 10px;
-}
-
 /*Resumo do Pedido*/
 
 /*Sacola.html*/
+
+
+/* Estilos necessários para a div .carrinho e elementos relacionados */
+
+.titulo-carrinho {
+  justify-content: center;
+  align-items: center;
+  margin-left: 550px;
+}
+
+body > main {
+  background: #fff;
+}
+
+body > main .content {
+  display: flex;
+}
+
+table {
+  width: 97%;
+  border-collapse: collapse;
+  margin: 0 20px 0;
+}
+
+table thead tr {
+  border-bottom: 3px solid #eee;
+}
+
+table thead tr th {
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+table tbody tr {
+  border-bottom: 3px solid #eee;
+}
+
+table tbody tr:last-child {
+  border: 0;
+}
+
+table tbody tr td {
+  padding: 30px 0;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+}
+
+.product img {
+  border-radius: 6px;
+}
+
+.product .info {
+  margin-left: 20px;
+}
+
+.product .info .name {
+  font-size: 20px;
+}
+
+.product .info .category {
+  color: #666;
+}
+
+.remove {
+  background: #eee;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.remove:hover {
+  background-color: #ddd;
+}
+
+.qty {
+  background: #eee;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.qty button {
+  background: transparent;
+  border: 0;
+  padding: 0 15px;
+  font-size: 20px;
+  height: 100%;
+}
+
+.qty button:hover {
+  background-color: #ddd;
+}
+
+.qty span {
+  margin: 0 10px;
+}
+
+aside {
+  margin: 0 15px 0;
+}
+
+aside .box {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #222;
+}
+
+aside .box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .box .info {
+  padding: 20px;
+  font-size: 16px;
+}
+
+aside .box .info > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+aside .box .info > div:last-child {
+  margin-bottom: 0;
+}
+
+aside .box footer {
+  padding: 15px 20px;
+  background: #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside > button {
+  background: #28a745;
+  padding: 15px 0;
+  display: block;
+  width: 100%;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+aside > button:hover {
+  background: #3bc55b;
+}
+
+.carrinho-container {
+  display: flex;
+  justify-content: center; /* Centraliza o carrinho horizontalmente */
+  align-items: center; /* Opcional: centraliza verticalmente, se necessário */
+  flex-direction: column; /* Garante que o conteúdo fique empilhado */
+  margin: 2rem auto; /* Espaçamento em relação aos outros elementos */
+  padding: 1rem;
+  max-width: 1200px; /* Limita a largura máxima */
+  background-color: #f9f9f9; /* Fundo claro para destacar */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.carrinho-container table {
+  width: 100%; /* Ocupe toda a largura do container */
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.carrinho-container table th,
+.carrinho-container table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* Divisórias suaves */
+}
+
+.carrinho-container table th {
+  background-color: #f1f1f1; /* Fundo diferenciado para o cabeçalho */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.carrinho-container table tbody tr:hover {
+  background-color: #f7f7f7; /* Destaque na linha ao passar o mouse */
+}
+
+.carrinho-container .btn-finalizar-compra {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrinho-container .btn-finalizar-compra:hover {
+  background-color: #218838;
+}
