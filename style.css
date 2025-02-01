@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: "Arial";
 }
@@ -68,7 +67,7 @@ nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-}   
+}
 
 .nav-icon-container {
   display: flex;
@@ -90,7 +89,7 @@ nav ul li {
   padding: 0.5rem;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none; /* Remove o sublinhado */
   color: inherit; /* Usa a cor do texto herdada do elemento pai */
 }
@@ -100,7 +99,6 @@ nav ul li:hover {
   transition: all 0.2s;
   font-weight: bold;
   cursor: pointer;
-
 }
 
 .menu-button {
@@ -112,7 +110,6 @@ nav ul li:hover {
 header {
   background-image: radial-gradient(#fff, #c7c7c7);
 }
-
 
 .header-bottom-side {
   display: flex;
@@ -288,7 +285,7 @@ main {
   font-weight: 600;
 }
 
-.botao-adicionar-carrinho{
+.botao-adicionar-carrinho {
   margin-top: 10px;
   box-sizing: content-box; /* Tenta calcular somente o conteúdo */
   padding: 10px 20px; /* Ajuste de espaço interno */
@@ -298,7 +295,7 @@ main {
   color: white;
 }
 
-.botao-adicionar-carrinho:hover{
+.botao-adicionar-carrinho:hover {
   cursor: pointer;
 }
 
@@ -488,7 +485,6 @@ nav {
 
 /*Footer*/
 
-
 /*Sacola.html*/
 
 /*Resumo do Pedido*/
@@ -546,8 +542,8 @@ table tbody tr td {
 }
 
 .product img {
-  max-width:150px;
-  max-height:150px;
+  max-width: 150px;
+  max-height: 150px;
   width: auto;
   height: auto;
   border-radius: 6px;
@@ -713,7 +709,7 @@ aside .box footer {
   margin-top: 5px;
   margin-bottom: 10px;
   padding: 15px 0;
-  margin-left: 68%;
+  margin-left: 55%;
   display: block;
   width: 30%;
   border: 0;
@@ -728,12 +724,12 @@ aside .box footer {
   cursor: pointer;
 }
 
-.botao-total{
+.botao-total {
   background: #70c483;
   text-align: center;
   margin-top: 50px;
   padding: 15px 50px;
-  margin-left: 68%;
+  margin-left: 55%;
   display: block;
   width: 30%;
   border: 0;
