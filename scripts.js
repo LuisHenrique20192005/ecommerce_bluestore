@@ -8,7 +8,7 @@ menuButton.addEventListener("click", () => {
 window.history.replaceState(null, null, window.location.pathname);
 
 function sendToWhatsApp() {
-  let phoneNumber = "5555991388707"; // Substitua pelo número da sua cliente (com DDD, sem espaços ou traços)
+  let phoneNumber = "5555991366180"; // Substitua pelo número da sua cliente (com DDD, sem espaços ou traços)
   let cartProducts = document.querySelectorAll(".cart-product");
   console.log("Quantidade de produtos no carrinho:", cartProducts.length);
   let message = "\u{1F6D2} *Pedido do Cliente:*%0A%0A";
